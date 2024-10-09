@@ -553,7 +553,7 @@ p {
 .arrows{
     position: absolute;
     top: 80%;
-    right: 52%;
+    right: 40%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
