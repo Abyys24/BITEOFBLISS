@@ -34,6 +34,10 @@ ul {
     justify-content: space-between;
     height: 60px;
     padding: 20px 0;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: #fff;
 }
 
 .main-nav ul {
@@ -46,7 +50,7 @@ ul {
 }
 
 .main-nav .logo {
-    width: 150px;
+    width: 200px;
 }
 
 .main-nav ul li a:hover {
