@@ -488,10 +488,13 @@ p {
     font-size: 5em; /* Ukuran font untuk judul dan topik. */
     font-weight: bold; /* Menebalkan font untuk judul dan topik. */
     line-height: 1.3em; /* Mengatur jarak antar baris. */
+    font-family: Raleway;
+}
+
 }
 
 .carousel .list .item .topic {
-    color: #f1683a; /* Warna khusus untuk topik. */
+    color: #f5f5f5; /* Warna khusus untuk topik. */
 }
 
 .carousel .list .item .buttons {
