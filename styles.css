@@ -455,7 +455,7 @@ p {
 .carousel{
     height: 100vh;
     margin-top: -50px;
-    width: 100vw;
+    width: 90vw;
     overflow: hidden;
     position: relative;
 }
@@ -470,9 +470,9 @@ p {
     height: 100%;
     object-fit: cover;
 }
-.carousel .list .item .content{
+.carousel .list .item .content {
     position: absolute;
-    top: 20%;
+    top: 10%; /* Move content higher */
     width: 1140px;
     max-width: 80%;
     left: 50%;
@@ -481,7 +481,9 @@ p {
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
+    padding: 20px 40px;
 }
+
 .carousel .list .item .author{
     font-weight: bold;
     letter-spacing: 10px;
@@ -492,6 +494,7 @@ p {
     font-weight: bold;
     line-height: 1.3em;
 }
+
 .carousel .list .item .topic{
     color: #f1683a;
 }
@@ -517,7 +520,7 @@ p {
 /* thumbail */
 .thumbnail{
     position: absolute;
-    bottom: 50px;
+    bottom: 10px;
     left: 50%;
     width: max-content;
     z-index: 100;
@@ -526,7 +529,7 @@ p {
 }
 .thumbnail .item{
     width: 150px;
-    height: 220px;
+    height: 180px;
     flex-shrink: 0;
     position: relative;
 }
