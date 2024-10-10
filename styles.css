@@ -1,858 +1,889 @@
 /* Global */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Mengatur model box untuk semua elemen menjadi border-box, sehingga padding dan border akan dihitung dalam lebar dan tinggi elemen. */
+    margin: 0; /* Menghapus margin default untuk semua elemen. */
+    padding: 0; /* Menghapus padding default untuk semua elemen. */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f5f5;
-    color: #333;
-    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mengatur font yang digunakan pada body. */
+    background: #f5f5f5; /* Mengatur warna latar belakang untuk body. */
+    color: #333; /* Mengatur warna teks default untuk body. */
+    font-size: 16px; /* Mengatur ukuran font default untuk body. */
 }
 
 a {
-    color: #262626;
-    text-decoration: none;
+    color: #262626; /* Mengatur warna teks untuk tautan (link). */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan. */
 }
 
 ul {
-    list-style: none;
+    list-style: none; /* Menghapus bullet atau penanda default pada list (ul). */
 }
 
 .container {
-    width: 90%;
-    margin: auto;
-    max-width: 1200px;
+    width: 90%; /* Mengatur lebar kontainer menjadi 90% dari lebar elemen induknya. */
+    margin: auto; /* Mengatur margin otomatis untuk memusatkan kontainer. */
+    max-width: 1200px; /* Mengatur lebar maksimum kontainer menjadi 1200px. */
 }
 
 /* Navigation */
 .main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 20px 0;
-    position: sticky;
-    z-index: 1000;
-    top: 0;
-    background-color: #f5f5f5;
+    display: flex; /* Mengatur tampilan elemen menjadi fleksibel untuk mendukung tata letak responsif. */
+    align-items: center; /* Menyelaraskan item di dalam flex container secara vertikal ke tengah. */
+    justify-content: space-between; /* Memberikan jarak yang sama antara item di dalam flex container. */
+    height: 60px; /* Mengatur tinggi navbar menjadi 60 piksel. */
+    padding: 20px 0; /* Menambahkan padding vertikal (atas dan bawah) 20 piksel, tanpa padding horizontal. */
+    position: sticky; /* Mengatur posisi elemen agar tetap terlihat saat di-scroll, hingga batas tertentu. */
+    z-index: 1000; /* Mengatur lapisan elemen agar tetap di atas elemen lain. */
+    top: 0; /* Menempatkan elemen pada posisi paling atas dari viewport saat sticky. */
+    background-color: #f5f5f5; /* Mengatur warna latar belakang navbar. */
 }
 
 .main-nav ul {
-    display: flex;
-    align-items: center;
+    display: flex; /* Mengatur tampilan elemen daftar menjadi fleksibel. */
+    align-items: center; /* Menyelaraskan item di dalam daftar secara vertikal ke tengah. */
 }
 
 .main-nav ul li {
-    padding: 0 20px;
+    padding: 0 20px; /* Menambahkan padding horizontal (kiri dan kanan) 20 piksel pada setiap item daftar. */
 }
 
 .main-nav .logo {
-    width: 200px;
+    width: 200px; /* Mengatur lebar logo menjadi 200 piksel. */
 }
 
 .main-nav ul li a:hover {
-    border-bottom: 2px solid #262626;
+    border-bottom: 2px solid #262626; /* Menambahkan garis bawah saat tautan di-hover dengan ketebalan 2 piksel dan warna #262626. */
 }
 
 .cta-section {
-    margin-right: 20px;
+    margin-right: 20px; /* Menambahkan margin kanan 20 piksel pada section CTA. */
 }
 
 .cta-button {
-    background: #e67e22;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 30px;
-    font-weight: bold;
+    background: #e67e22; /* Mengatur warna latar belakang tombol CTA. */
+    padding: 10px 20px; /* Menambahkan padding vertikal 10 piksel dan horizontal 20 piksel pada tombol. */
+    color: white; /* Mengatur warna teks tombol menjadi putih. */
+    border-radius: 30px; /* Membuat sudut tombol membulat dengan radius 30 piksel. */
+    font-weight: bold; /* Mengatur ketebalan font tombol menjadi bold. */
 }
 
 .cta-button:hover {
-    background-color: #d35400;
+    background-color: #d35400; /* Mengubah warna latar belakang tombol saat di-hover. */
 }
 
 /* Hero Section */
 .hero {
-    width: 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    color: white;
-    background-size: cover;
-    background-position: center;
+    width: 100%; /* Mengatur lebar elemen hero menjadi 100% dari elemen induknya. */
+    height: 500px; /* Mengatur tinggi elemen hero menjadi 500 piksel. */
+    display: flex; /* Mengatur tampilan elemen menjadi fleksibel untuk tata letak responsif. */
+    align-items: center; /* Menyelaraskan item di dalam flex container secara vertikal ke tengah. */
+    justify-content: center; /* Menyelaraskan item di dalam flex container secara horizontal ke tengah. */
+    position: relative; /* Mengatur posisi elemen menjadi relatif, sehingga elemen anak dapat diposisikan secara absolut. */
+    text-align: center; /* Mengatur teks di dalam elemen menjadi rata tengah. */
+    color: white; /* Mengatur warna teks menjadi putih. */
+    background-size: cover; /* Mengatur gambar latar belakang untuk menutupi seluruh elemen hero. */
+    background-position: center; /* Mengatur posisi gambar latar belakang di tengah elemen hero. */
 }
 
 .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    content: ''; /* Menambahkan konten kosong untuk pseudo-element setelah elemen hero. */
+    position: absolute; /* Mengatur posisi pseudo-element menjadi absolut. */
+    top: 0; /* Menempatkan pseudo-element pada posisi paling atas dari elemen hero. */
+    left: 0; /* Menempatkan pseudo-element pada posisi paling kiri dari elemen hero. */
+    right: 0; /* Menempatkan pseudo-element pada posisi paling kanan dari elemen hero. */
+    bottom: 0; /* Menempatkan pseudo-element pada posisi paling bawah dari elemen hero. */
+    background: rgba(0, 0, 0, 0.4); /* Mengatur latar belakang pseudo-element menjadi hitam dengan transparansi 40%. */
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+    position: relative; /* Mengatur posisi elemen konten hero menjadi relatif. */
+    z-index: 1; /* Mengatur lapisan elemen konten agar muncul di atas pseudo-element dengan latar belakang. */
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 48px; /* Mengatur ukuran font untuk judul menjadi 48 piksel. */
+    margin-bottom: 20px; /* Menambahkan margin bawah 20 piksel pada judul. */
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 18px; /* Mengatur ukuran font untuk paragraf menjadi 18 piksel. */
+    margin-bottom: 30px; /* Menambahkan margin bawah 30 piksel pada paragraf. */
 }
 
 /* Cards Section */
 .home-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    margin-top: 30px;
+    display: grid; /* Mengatur tampilan elemen menjadi grid untuk tata letak yang responsif. */
+    grid-template-columns: repeat(4, 1fr); /* Mengatur empat kolom dengan lebar yang sama (1fr) dalam grid. */
+    grid-gap: 20px; /* Menambahkan jarak 20 piksel antara item di dalam grid. */
+    margin-top: 30px; /* Menambahkan margin atas 30 piksel pada Cards Section. */
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Aturan untuk perangkat dengan lebar maksimum 768 piksel. */
     .home-cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Mengubah jumlah kolom menjadi dua untuk tampilan yang lebih responsif. */
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 32px; /* Mengatur ukuran font untuk judul hero menjadi 32 piksel pada layar kecil. */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* Aturan untuk perangkat dengan lebar maksimum 480 piksel. */
     .home-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Mengubah jumlah kolom menjadi satu untuk tampilan seluler. */
     }
 
     .hero h1 {
-        font-size: 24px;
+        font-size: 24px; /* Mengatur ukuran font untuk judul hero menjadi 24 piksel pada layar yang lebih kecil. */
     }
 }
 
 /* Our Brands Section */
 .our-brands {
-    text-align: center;
-    padding: 50px 0;
+    text-align: center; /* Mengatur teks di tengah. */
+    padding: 50px 0; /* Menambahkan padding atas dan bawah sebesar 50 piksel. */
 }
 
 .our-brands h2 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 32px; /* Ukuran font untuk judul. */
+    color: #333; /* Warna teks untuk judul. */
+    margin-bottom: 20px; /* Margin bawah 20 piksel untuk jarak dengan elemen berikutnya. */
 }
 
 .our-brands p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
+    font-size: 18px; /* Ukuran font untuk paragraf. */
+    color: #666; /* Warna teks untuk paragraf. */
+    margin-bottom: 40px; /* Margin bawah 40 piksel untuk jarak dengan elemen berikutnya. */
 }
 
 /* Footer Section */
 footer {
-    background-color: #f5f5f5;
-    padding: 40px 0;
-    color: #333;
+    background-color: #f5f5f5; /* Warna latar belakang footer. */
+    padding: 40px 0; /* Padding atas dan bawah sebesar 40 piksel. */
+    color: #333; /* Warna teks untuk footer. */
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
+    display: grid; /* Mengatur elemen dalam tata letak grid. */
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; /* Mengatur kolom grid dengan rasio lebar yang berbeda. */
+    max-width: 1200px; /* Lebar maksimum footer container. */
+    margin: 0 auto; /* Mengatur margin otomatis untuk pusatkan container. */
+    gap: 20px; /* Jarak antara item dalam grid. */
 }
 
 .footer-address {
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 14px; /* Ukuran font untuk alamat. */
+    line-height: 1.8; /* Jarak antar baris. */
 }
 
+/* Judul di berbagai bagian footer */
 .footer-brands h4,
 .footer-about h4,
 .footer-membership h4,
 .footer-contact h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #262626;
+    font-size: 18px; /* Ukuran font untuk judul di footer. */
+    margin-bottom: 15px; /* Margin bawah 15 piksel untuk jarak dengan elemen berikutnya. */
+    color: #262626; /* Warna teks untuk judul. */
 }
 
+/* Daftar di footer */
 .footer-brands ul,
 .footer-about ul,
 .footer-membership ul {
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
-    line-height: 1.8;
+    list-style: none; /* Menghilangkan bullet point di daftar. */
+    padding: 0; /* Mengatur padding menjadi nol. */
+    font-size: 14px; /* Ukuran font untuk item daftar. */
+    line-height: 1.8; /* Jarak antar baris di daftar. */
 }
 
 .footer-brands ul li,
 .footer-about ul li,
 .footer-membership ul li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Margin bawah 10 piksel untuk jarak antara item daftar. */
 }
 
 .footer-about ul li a,
 .footer-membership ul li a {
-    color: #262626;
-    text-decoration: none;
+    color: #262626; /* Warna link dalam daftar. */
+    text-decoration: none; /* Menghilangkan garis bawah pada link. */
 }
 
 .footer-about ul li a:hover,
 .footer-membership ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Menggarisbawahi link saat dihover. */
 }
 
 .footer-contact {
-    text-align: center;
+    text-align: center; /* Mengatur teks di tengah untuk bagian kontak. */
 }
 
 .social-icons {
-    margin-top: 10px;
+    margin-top: 10px; /* Menambahkan margin atas 10 piksel pada ikon sosial. */
 }
 
 .social-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #262626;
-    text-decoration: none;
+    margin: 0 10px; /* Margin horizontal 10 piksel pada ikon sosial. */
+    font-size: 24px; /* Ukuran font untuk ikon sosial. */
+    color: #262626; /* Warna teks untuk ikon sosial. */
+    text-decoration: none; /* Menghilangkan garis bawah pada ikon sosial. */
 }
 
 .social-icons a:hover {
-    color: #e67e22;
+    color: #e67e22; /* Mengubah warna ikon sosial saat dihover. */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .footer-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Mengubah layout menjadi dua kolom pada layar kecil. */
     }
 
     .footer-contact {
-        grid-column: span 2;
+        grid-column: span 2; /* Membuat bagian kontak memakan dua kolom. */
     }
 }
 
 @media (max-width: 480px) {
     .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: 1fr; /* Mengubah layout menjadi satu kolom pada layar yang lebih kecil. */
+        text-align: center; /* Mengatur teks di tengah untuk tampilan mobile. */
     }
 
     .footer-contact {
-        grid-column: span 1;
+        grid-column: span 1; /* Mengatur bagian kontak memakan satu kolom. */
     }
 }
 
 /* Styling khusus untuk halaman detail Butler's Steak */
-
 .detail-page {
-    background-color: #fff;
-    color: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 20px 0;
+    background-color: #fff; /* Warna latar belakang untuk halaman detail. */
+    color: #333; /* Warna teks untuk halaman detail. */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang digunakan untuk halaman detail. */
+    padding: 20px 0; /* Padding atas dan bawah sebesar 20 piksel. */
 }
 
 .detail-header {
-    background-color: #fafafa;
-    padding: 40px 0;
-    text-align: center;
+    background-color: #fafafa; /* Warna latar belakang untuk header detail. */
+    padding: 40px 0; /* Padding atas dan bawah sebesar 40 piksel. */
+    text-align: center; /* Mengatur teks di tengah untuk header. */
 }
 
 .detail-header h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 36px; /* Ukuran font untuk judul di header detail. */
+    color: #333; /* Warna teks untuk judul di header detail. */
+    margin-bottom: 20px; /* Margin bawah 20 piksel untuk jarak dengan elemen berikutnya. */
 }
 
 .detail-header p {
-    font-size: 18px;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 18px; /* Ukuran font untuk paragraf di header. */
+    color: #666; /* Warna teks untuk paragraf di header. */
+    max-width: 800px; /* Lebar maksimum paragraf. */
+    margin: 0 auto; /* Margin otomatis untuk pusatkan paragraf. */
 }
 
 .detail-content {
-    padding: 40px 0;
+    padding: 40px 0; /* Padding atas dan bawah sebesar 40 piksel untuk konten detail. */
 }
 
 .detail-content h2 {
-    font-size: 28px;
-    color: #262626;
-    margin-bottom: 15px;
+    font-size: 28px; /* Ukuran font untuk sub-judul di konten detail. */
+    color: #262626; /* Warna teks untuk sub-judul di konten detail. */
+    margin-bottom: 15px; /* Margin bawah 15 piksel untuk jarak dengan elemen berikutnya. */
 }
 
 .detail-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 18px; /* Ukuran font untuk paragraf di konten detail. */
+    line-height: 1.6; /* Jarak antar baris di paragraf. */
+    color: #555; /* Warna teks untuk paragraf di konten detail. */
+    margin-bottom: 20px; /* Margin bawah 20 piksel untuk jarak dengan elemen berikutnya. */
 }
 
 .detail-footer {
-    background-color: #f5f5f5;
-    padding: 40px 0;
-    text-align: center;
+    background-color: #f5f5f5; /* Warna latar belakang untuk footer detail. */
+    padding: 40px 0; /* Padding atas dan bawah sebesar 40 piksel. */
+    text-align: center; /* Mengatur teks di tengah untuk footer detail. */
 }
 
 .detail-footer p {
-    font-size: 16px;
-    color: #333;
+    font-size: 16px; /* Ukuran font untuk teks di footer detail. */
+    color: #333; /* Warna teks untuk footer detail. */
 }
 
 .detail-footer .social-icons a {
-    margin: 0 10px;
-    font-size: 20px;
-    color: #333;
-    text-decoration: none;
+    margin: 0 10px; /* Margin horizontal 10 piksel pada ikon sosial di footer detail. */
+    font-size: 20px; /* Ukuran font untuk ikon sosial di footer detail. */
+    color: #333; /* Warna teks untuk ikon sosial di footer detail. */
+    text-decoration: none; /* Menghilangkan garis bawah pada ikon sosial. */
 }
 
 .detail-footer .social-icons a:hover {
-    color: #e67e22;
+    color: #e67e22; /* Mengubah warna ikon sosial saat dihover. */
 }
 
 /* Responsiveness for the detail page */
 @media (max-width: 768px) {
     .detail-header h1 {
-        font-size: 28px;
+        font-size: 28px; /* Ukuran font untuk judul di header detail pada layar kecil. */
     }
     .detail-content h2 {
-        font-size: 24px;
+        font-size: 24px; /* Ukuran font untuk sub-judul di konten detail pada layar kecil. */
     }
 }
 
+/* Best Sellers Section */
 .best-sellers {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    text-align: center; /* Mengatur teks di tengah untuk bagian best sellers. */
+    padding: 50px 0; /* Menambahkan padding atas dan bawah sebesar 50 piksel. */
+    background-color: #f9f9f9; /* Warna latar belakang untuk bagian best sellers. */
 }
 
 .best-sellers h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 32px; /* Ukuran font untuk judul di bagian best sellers. */
+    margin-bottom: 20px; /* Margin bawah 20 piksel untuk jarak dengan elemen berikutnya. */
+    color: #333; /* Warna teks untuk judul di bagian best sellers. */
 }
 
 .best-seller-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 20px;
+    display: grid; /* Mengatur elemen dalam tata letak grid. */
+    grid-template-columns: repeat(4, 1fr); /* Mengatur empat kolom dengan lebar yang sama dalam grid. */
+    gap: 20px; /* Jarak antara item dalam grid. */
+    margin-top: 20px; /* Margin atas 20 piksel untuk jarak dengan elemen sebelumnya. */
 }
 
 .best-seller-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
+    background-color: #fff; /* Warna latar belakang untuk kartu produk. */
+    padding: 20px; /* Padding dalam kartu produk. */
+    border: 1px solid #ddd; /* Garis batas kartu produk. */
+    border-radius: 8px; /* Sudut melengkung pada kartu produk. */
+    text-align: left; /* Mengatur teks di kiri dalam kartu produk. */
+    transition: transform 0.3s; /* Efek transisi untuk transformasi. */
 }
 
 .best-seller-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px); /* Efek mengangkat saat dihover. */
 }
 
 .best-seller-card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Gambar mengambil lebar penuh dari kartu produk. */
+    border-radius: 4px; /* Sudut melengkung pada gambar produk. */
 }
 
 .best-seller-card h3 {
-    font-size: 18px;
-    color: #333;
-    padding: 15px;
+    font-size: 18px; /* Ukuran font untuk judul produk dalam kartu. */
+    margin: 10px 0; /* Margin atas dan bawah 10 piksel untuk jarak dengan elemen berikutnya. */
+    color: #333; /* Warna teks untuk judul produk. */
 }
 
-.order-button {
-    display: inline-block;
-    background: #e67e22;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
+.best-seller-card p {
+    font-size: 16px; /* Ukuran font untuk deskripsi produk dalam kartu. */
+    color: #666; /* Warna teks untuk deskripsi produk. */
 }
 
-.order-button:hover {
-    background-color: #d35400;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .best-seller-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .best-seller-cards {
-        grid-template-columns: 1fr;
-    }
+.best-seller-card .price {
+    font-size: 20px; /* Ukuran font untuk harga produk dalam kartu. */
+    color: #e67e22; /* Warna teks untuk harga produk. */
+    margin-top: 10px; /* Margin atas 10 piksel untuk jarak dengan elemen sebelumnya. */
 }
 
 /* Dropdown Menu Styles */
 .main-nav .dropdown {
-    position: relative;
+    position: relative; /* Mengatur posisi dropdown relatif terhadap elemen induknya. */
 }
 
 .main-nav .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    min-width: 200px;
-    z-index: 1000;
-    top: 100%; /* Position the dropdown below the parent */
-    left: 0;
+    display: none; /* Menyembunyikan menu dropdown secara default. */
+    position: absolute; /* Mengatur posisi menu dropdown secara absolut. */
+    background-color: #fff; /* Warna latar belakang untuk menu dropdown. */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Memberikan bayangan pada menu dropdown. */
+    padding: 10px; /* Padding di dalam menu dropdown. */
+    min-width: 200px; /* Lebar minimum menu dropdown. */
+    z-index: 1000; /* Mengatur z-index agar menu dropdown muncul di atas elemen lain. */
+    top: 100%; /* Menempatkan dropdown di bawah elemen induk. */
+    left: 0; /* Mengatur posisi horizontal menu dropdown. */
 }
 
 .main-nav .dropdown-menu li {
-    padding: 10px 0;
+    padding: 10px 0; /* Padding vertikal untuk setiap item dalam menu dropdown. */
 }
 
 .main-nav .dropdown-menu li a {
-    display: block;
-    color: #333;
-    padding: 10px 20px;
-    white-space: nowrap;
+    display: block; /* Mengatur link agar mengisi seluruh area item. */
+    color: #333; /* Warna teks untuk link. */
+    padding: 10px 20px; /* Padding di dalam link. */
+    white-space: nowrap; /* Mencegah teks membungkus ke baris berikutnya. */
 }
 
 .main-nav .dropdown-menu li a:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Mengubah warna latar belakang saat hover pada link. */
 }
 
 /* Show the dropdown menu on hover */
 .main-nav .dropdown:hover .dropdown-menu {
-    display: block;
+    display: block; /* Menampilkan menu dropdown saat elemen induk dihover. */
 }
 
 /* Ensure responsiveness on mobile */
 @media (max-width: 768px) {
     .main-nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Mengatur arah flex menjadi kolom pada layar kecil. */
     }
 
     .main-nav .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        padding-left: 20px;
+        position: static; /* Mengubah posisi menu dropdown menjadi statis pada layar kecil. */
+        box-shadow: none; /* Menghilangkan bayangan pada menu dropdown. */
+        padding-left: 20px; /* Menambahkan padding kiri pada menu dropdown. */
     }
 }
 
 p {
-    text-align: justify;
+    text-align: justify; /* Mengatur teks paragraf agar terjustifikasi. */
 }
-/* carousel */
-.carousel{
-    height: 100vh;
-    margin-top: -50px;
-    width: 90vw;
-    overflow: hidden;
-    position: relative;
+
+/* Carousel */
+.carousel {
+    height: 100vh; /* Tinggi carousel 100% dari tinggi viewport. */
+    margin-top: -50px; /* Mengatur margin atas negatif untuk mengangkat carousel. */
+    width: auto; /* Lebar otomatis untuk carousel. */
+    overflow: hidden; /* Menyembunyikan bagian yang melampaui batas carousel. */
+    position: relative; /* Mengatur posisi relatif untuk elemen di dalamnya. */
 }
-.carousel .list .item{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0 0 0 0;
+
+.carousel .list .item {
+    width: 100%; /* Lebar setiap item dalam carousel 100%. */
+    height: 100%; /* Tinggi setiap item dalam carousel 100%. */
+    position: absolute; /* Mengatur posisi item secara absolut. */
+    inset: 0 0 0 0; /* Mengatur semua sisi item ke 0 (diisi seluruh area). */
 }
-.carousel .list .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.carousel .list .item img {
+    width: 100%; /* Lebar gambar 100% dari area item. */
+    height: 100%; /* Tinggi gambar 100% dari area item. */
+    object-fit: cover; /* Memastikan gambar menutupi area dengan proporsi. */
 }
+
 .carousel .list .item .content {
-    position: absolute;
-    top: 10%; /* Move content higher */
-    width: 1140px;
-    max-width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 30%;
-    box-sizing: border-box;
-    color: #fff;
-    text-shadow: 0 5px 10px #0004;
-    padding: 20px 40px;
+    position: absolute; /* Mengatur posisi konten secara absolut. */
+    top: 10%; /* Mengatur konten lebih tinggi dari bagian atas. */
+    width: 1140px; /* Lebar konten. */
+    max-width: 80%; /* Lebar maksimum konten. */
+    left: 50%; /* Mengatur posisi konten dari kiri 50%. */
+    transform: translateX(-50%); /* Memindahkan konten ke kiri setengah dari lebar konten. */
+    padding-right: 30%; /* Menambahkan padding kanan. */
+    box-sizing: border-box; /* Mengatur model box untuk menghitung padding dalam lebar total. */
+    color: #fff; /* Warna teks konten. */
+    text-shadow: 0 5px 10px #0004; /* Menambahkan bayangan teks untuk kontras. */
+    padding: 20px 40px; /* Padding di dalam konten. */
 }
 
-.carousel .list .item .author{
-    font-weight: bold;
-    letter-spacing: 10px;
+.carousel .list .item .author {
+    font-weight: bold; /* Menebalkan teks penulis. */
+    letter-spacing: 10px; /* Jarak antar huruf untuk teks penulis. */
 }
+
 .carousel .list .item .title,
-.carousel .list .item .topic{
-    font-size: 5em;
-    font-weight: bold;
-    line-height: 1.3em;
+.carousel .list .item .topic {
+    font-size: 5em; /* Ukuran font untuk judul dan topik. */
+    font-weight: bold; /* Menebalkan font untuk judul dan topik. */
+    line-height: 1.3em; /* Mengatur jarak antar baris. */
 }
 
-.carousel .list .item .topic{
-    color: #f1683a;
-}
-.carousel .list .item .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-.carousel .list .item .buttons button{
-    border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
-    font-family: Poppins;
-    font-weight: 500;
-}
-.carousel .list .item .buttons button:nth-child(2){
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #eee;
-}
-/* thumbail */
-.thumbnail{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    width: max-content;
-    z-index: 100;
-    display: flex;
-    gap: 20px;
-}
-.thumbnail .item{
-    width: 150px;
-    height: 180px;
-    flex-shrink: 0;
-    position: relative;
-}
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.thumbnail .item .content{
-    color: #fff;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-}
-.thumbnail .item .content .title{
-    font-weight: 500;
-}
-.thumbnail .item .content .description{
-    font-weight: 300;
-}
-/* arrows */
-.arrows{
-    position: absolute;
-    top: 80%;
-    right: 40%;
-    z-index: 100;
-    width: 300px;
-    max-width: 30%;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-.arrows button{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #eee4;
-    border: none;
-    color: #fff;
-    font-family: monospace;
-    font-weight: bold;
-    transition: .5s;
-}
-.arrows button:hover{
-    background-color: #fff;
-    color: #000;
+.carousel .list .item .topic {
+    color: #f1683a; /* Warna khusus untuk topik. */
 }
 
-/* animation */
-.carousel .list .item:nth-child(1){
-    z-index: 1;
+.carousel .list .item .buttons {
+    display: grid; /* Mengatur elemen tombol dalam grid. */
+    grid-template-columns: repeat(2, 130px); /* Dua kolom dengan lebar 130px. */
+    grid-template-rows: 40px; /* Satu baris dengan tinggi 40px. */
+    gap: 5px; /* Jarak antara tombol. */
+    margin-top: 20px; /* Margin atas untuk jarak dengan elemen sebelumnya. */
 }
 
-/* animation text in first item */
+.carousel .list .item .buttons button {
+    border: none; /* Menghilangkan batas tombol. */
+    background-color: #eee; /* Warna latar belakang tombol. */
+    letter-spacing: 3px; /* Jarak antar huruf dalam tombol. */
+    font-family: Poppins; /* Mengatur font untuk tombol. */
+    font-weight: 500; /* Mengatur ketebalan font untuk tombol. */
+}
 
+.carousel .list .item .buttons button:nth-child(2) {
+    background-color: transparent; /* Mengatur latar belakang tombol kedua menjadi transparan. */
+    border: 1px solid #fff; /* Mengatur batas tombol kedua menjadi putih. */
+    color: #eee; /* Warna teks tombol kedua. */
+}
+
+/* Thumbnail */
+.thumbnail {
+    position: absolute; /* Mengatur posisi thumbnail secara absolut. */
+    bottom: 10px; /* Menempatkan thumbnail 10px dari bagian bawah. */
+    left: 50%; /* Menempatkan thumbnail dari kiri 50%. */
+    width: max-content; /* Lebar maksimum untuk konten thumbnail. */
+    z-index: 100; /* Mengatur z-index agar thumbnail muncul di atas elemen lain. */
+    display: flex; /* Mengatur thumbnail sebagai flex container. */
+    gap: 20px; /* Jarak antara item thumbnail. */
+}
+
+.thumbnail .item {
+    width: 150px; /* Lebar setiap item thumbnail. */
+    height: 180px; /* Tinggi setiap item thumbnail. */
+    flex-shrink: 0; /* Mencegah item thumbnail mengecil. */
+    position: relative; /* Mengatur posisi relatif untuk item thumbnail. */
+}
+
+.thumbnail .item img {
+    width: 100%; /* Lebar gambar thumbnail 100% dari area item. */
+    height: 100%; /* Tinggi gambar thumbnail 100% dari area item. */
+    object-fit: cover; /* Memastikan gambar menutupi area dengan proporsi. */
+    border-radius: 20px; /* Sudut melengkung pada gambar thumbnail. */
+}
+
+.thumbnail .item .content {
+    color: #fff; /* Warna teks untuk konten thumbnail. */
+    position: absolute; /* Mengatur posisi konten secara absolut. */
+    bottom: 10px; /* Menempatkan konten 10px dari bagian bawah. */
+    left: 10px; /* Menempatkan konten 10px dari sisi kiri. */
+    right: 10px; /* Menempatkan konten 10px dari sisi kanan. */
+}
+
+.thumbnail .item .content .title {
+    font-weight: 500; /* Ketebalan font untuk judul konten thumbnail. */
+}
+
+.thumbnail .item .content .description {
+    font-weight: 300; /* Ketebalan font untuk deskripsi konten thumbnail. */
+}
+
+/* Arrows */
+.arrows {
+    position: absolute; /* Mengatur posisi panah secara absolut. */
+    top: 80%; /* Menempatkan panah 80% dari atas. */
+    right: 40%; /* Menempatkan panah 40% dari sisi kanan. */
+    z-index: 100; /* Mengatur z-index agar panah muncul di atas elemen lain. */
+    width: 300px; /* Lebar untuk area panah. */
+    max-width: 30%; /* Lebar maksimum untuk area panah. */
+    display: flex; /* Mengatur panah sebagai flex container. */
+    gap: 10px; /* Jarak antara tombol panah. */
+    align-items: center; /* Mengatur semua item di dalam panah agar sejajar secara vertikal. */
+}
+
+.arrows button {
+    width: 40px; /* Lebar tombol panah. */
+    height: 40px; /* Tinggi tombol panah. */
+    border-radius: 50%; /* Membuat tombol panah berbentuk lingkaran. */
+    background-color: #eee4; /* Warna latar belakang untuk tombol panah. */
+    border: none; /* Menghilangkan batas tombol panah. */
+    color: #fff; /* Warna teks untuk tombol panah. */
+    font-family: monospace; /* Mengatur font untuk tombol panah. */
+    font-weight: bold; /* Menebalkan font untuk tombol panah. */
+    transition: .5s; /* Mengatur transisi untuk efek hover. */
+}
+
+.arrows button:hover {
+    background-color: #fff; /* Mengubah warna latar belakang saat hover. */
+    color: #000; /* Mengubah warna teks saat hover. */
+}
+
+/* Animation */
+.carousel .list .item:nth-child(1) {
+    z-index: 1; /* Mengatur z-index item pertama agar berada di atas item lain. */
+}
+
+/* Animation text in first item */
 .carousel .list .item:nth-child(1) .content .author,
 .carousel .list .item:nth-child(1) .content .title,
 .carousel .list .item:nth-child(1) .content .topic,
 .carousel .list .item:nth-child(1) .content .des,
-.carousel .list .item:nth-child(1) .content .buttons
-{
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: showContent .5s 1s linear 1 forwards;
+.carousel .list .item:nth-child(1) .content .buttons {
+    transform: translateY(50px); /* Memindahkan elemen 50px ke bawah. */
+    filter: blur(20px); /* Menambahkan efek blur pada elemen. */
+    opacity: 0; /* Mengatur opasitas menjadi 0 (sembunyi). */
+    animation: showContent .5s 1s linear 1 forwards; /* Menambahkan animasi 'showContent'. */
 }
-@keyframes showContent{
-    to{
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-.carousel .list .item:nth-child(1) .content .title{
-    animation-delay: 1.2s!important;
-}
-.carousel .list .item:nth-child(1) .content .topic{
-    animation-delay: 1.4s!important;
-}
-.carousel .list .item:nth-child(1) .content .des{
-    animation-delay: 1.6s!important;
-}
-.carousel .list .item:nth-child(1) .content .buttons{
-    animation-delay: 1.8s!important;
-}
-/* create animation when next click */
-.carousel.next .list .item:nth-child(1) img{
-    width: 150px;
-    height: 220px;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    border-radius: 30px;
-    animation: showImage .5s linear 1 forwards;
-}
-@keyframes showImage{
-    to{
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px); /* Mengembalikan posisi ke default (0px). */
+        filter: blur(0px); /* Menghilangkan efek blur. */
+        opacity: 1; /* Mengatur opasitas menjadi 1 (tampil). */
     }
 }
 
-.carousel.next .thumbnail .item:nth-last-child(1){
-    overflow: hidden;
-    animation: showThumbnail .5s linear 1 forwards;
+/* Delay untuk animasi masing-masing elemen di dalam konten pertama */
+.carousel .list .item:nth-child(1) .content .title {
+    animation-delay: 1.2s !important; /* Menambahkan penundaan untuk judul. */
 }
-.carousel.prev .list .item img{
-    z-index: 100;
+
+.carousel .list .item:nth-child(1) .content .topic {
+    animation-delay: 1.4s !important; /* Menambahkan penundaan untuk topik. */
 }
-@keyframes showThumbnail{
-    from{
-        width: 0;
-        opacity: 0;
+
+.carousel .list .item:nth-child(1) .content .des {
+    animation-delay: 1.6s !important; /* Menambahkan penundaan untuk deskripsi. */
+}
+
+.carousel .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1.8s !important; /* Menambahkan penundaan untuk tombol. */
+}
+
+/* Create animation when next click */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px; /* Lebar awal gambar sebelum animasi. */
+    height: 220px; /* Tinggi awal gambar sebelum animasi. */
+    position: absolute; /* Mengatur posisi gambar secara absolut. */
+    bottom: 50px; /* Menempatkan gambar 50px dari bagian bawah. */
+    left: 50%; /* Menempatkan gambar dari kiri 50%. */
+    border-radius: 30px; /* Menambahkan sudut melengkung pada gambar. */
+    animation: showImage .5s linear 1 forwards; /* Menambahkan animasi 'showImage'. */
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0; /* Mengubah posisi gambar ke bawah (0px). */
+        left: 0; /* Mengubah posisi gambar ke kiri (0px). */
+        width: 100%; /* Mengatur lebar gambar menjadi 100%. */
+        height: 100%; /* Mengatur tinggi gambar menjadi 100%. */
+        border-radius: 0; /* Menghilangkan sudut melengkung pada gambar. */
     }
 }
-.carousel.next .thumbnail{
-    animation: effectNext .5s linear 1 forwards;
+
+/* Animasi untuk thumbnail saat berpindah ke item berikutnya */
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden; /* Menyembunyikan elemen yang melampaui batas. */
+    animation: showThumbnail .5s linear 1 forwards; /* Menambahkan animasi 'showThumbnail'. */
 }
 
-@keyframes effectNext{
-    from{
-        transform: translateX(150px);
+.carousel.prev .list .item img {
+    z-index: 100; /* Mengatur z-index gambar untuk memastikan tampil di atas. */
+}
+
+@keyframes showThumbnail {
+    from {
+        width: 0; /* Memulai dengan lebar 0. */
+        opacity: 0; /* Memulai dengan opasitas 0 (sembunyi). */
     }
 }
 
-/* running time */
+/* Animasi untuk thumbnail saat berpindah ke item berikutnya */
+.carousel.next .thumbnail {
+    animation: effectNext .5s linear 1 forwards; /* Menambahkan animasi 'effectNext'. */
+}
 
-.carousel .time{
-    position: absolute;
-    z-index: 1000;
-    width: 0%;
-    height: 3px;
-    background-color: #f1683a;
-    left: 0;
-    top: 0;
+@keyframes effectNext {
+    from {
+        transform: translateX(150px); /* Memindahkan thumbnail 150px ke kanan. */
+    }
+}
+
+/* Running time indicator */
+.carousel .time {
+    position: absolute; /* Mengatur posisi waktu secara absolut. */
+    z-index: 1000; /* Mengatur z-index agar waktu tampil di atas. */
+    width: 0%; /* Lebar awal indikator waktu. */
+    height: 3px; /* Tinggi indikator waktu. */
+    background-color: #f1683a; /* Warna latar belakang indikator waktu. */
+    left: 0; /* Mengatur posisi indikator waktu dari kiri 0. */
+    top: 0; /* Mengatur posisi indikator waktu dari atas 0. */
 }
 
 .carousel.next .time,
-.carousel.prev .time{
-    animation: runningTime 3s linear 1 forwards;
-}
-@keyframes runningTime{
-    from{ width: 100%}
-    to{width: 0}
+.carousel.prev .time {
+    animation: runningTime 3s linear 1 forwards; /* Menambahkan animasi 'runningTime'. */
 }
 
-
-/* prev click */
-
-.carousel.prev .list .item:nth-child(2){
-    z-index: 2;
+@keyframes runningTime {
+    from { width: 100%; } /* Memulai dengan lebar 100%. */
+    to { width: 0; } /* Mengubah lebar menjadi 0. */
 }
 
-.carousel.prev .list .item:nth-child(2) img{
-    animation: outFrame 0.5s linear 1 forwards;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Animasi untuk tombol panah sebelumnya */
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2; /* Mengatur z-index item kedua agar tampil di atas. */
 }
-@keyframes outFrame{
-    to{
-        width: 150px;
-        height: 220px;
-        bottom: 50px;
-        left: 50%;
-        border-radius: 20px;
+
+.carousel.prev .list .item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards; /* Menambahkan animasi 'outFrame'. */
+    position: absolute; /* Mengatur posisi gambar secara absolut. */
+    bottom: 0; /* Menempatkan gambar di bagian bawah. */
+    left: 0; /* Menempatkan gambar di sisi kiri. */
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px; /* Mengatur lebar akhir gambar menjadi 150px. */
+        height: 220px; /* Mengatur tinggi akhir gambar menjadi 220px. */
+        bottom: 50px; /* Mengatur posisi akhir gambar 50px dari bawah. */
+        left: 50%; /* Mengatur posisi akhir gambar dari kiri 50%. */
+        border-radius: 20px; /* Menambahkan sudut melengkung akhir pada gambar. */
     }
 }
 
-.carousel.prev .thumbnail .item:nth-child(1){
-    overflow: hidden;
-    opacity: 0;
-    animation: showThumbnail .5s linear 1 forwards;
+/* Animasi untuk thumbnail saat berpindah ke item sebelumnya */
+.carousel.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden; /* Menyembunyikan elemen yang melampaui batas. */
+    opacity: 0; /* Memulai dengan opasitas 0 (sembunyi). */
+    animation: showThumbnail .5s linear 1 forwards; /* Menambahkan animasi 'showThumbnail'. */
 }
+
+/* Menonaktifkan interaksi dengan tombol panah saat animasi berlangsung */
 .carousel.next .arrows button,
-.carousel.prev .arrows button{
-    pointer-events: none;
+.carousel.prev .arrows button {
+    pointer-events: none; /* Menonaktifkan interaksi dengan tombol. */
 }
+
+/* Animasi untuk konten item kedua saat sebelumnya */
 .carousel.prev .list .item:nth-child(2) .content .author,
 .carousel.prev .list .item:nth-child(2) .content .title,
 .carousel.prev .list .item:nth-child(2) .content .topic,
 .carousel.prev .list .item:nth-child(2) .content .des,
-.carousel.prev .list .item:nth-child(2) .content .buttons
-{
-    animation: contentOut 1.5s linear 1 forwards!important;
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+    animation: contentOut 1.5s linear 1 forwards !important; /* Menambahkan animasi 'contentOut'. */
 }
 
-@keyframes contentOut{
-    to{
-        transform: translateY(-150px);
-        filter: blur(20px);
-        opacity: 0;
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px); /* Memindahkan konten 150px ke atas. */
+        filter: blur(20px); /* Menambahkan efek blur pada konten. */
+        opacity: 0; /* Mengatur opasitas menjadi 0 (sembunyi). */
     }
 }
+
+/* Responsif untuk layar kecil */
 @media screen and (max-width: 678px) {
-    .carousel .list .item .content{
-        padding-right: 0;
+    .carousel .list .item .content {
+        padding-right: 0; /* Menghilangkan padding kanan pada konten. */
     }
-    .carousel .list .item .content .title{
-        font-size: 30px;
+    .carousel .list .item .content .title {
+        font-size: 30px; /* Mengatur ukuran font judul menjadi 30px pada layar kecil. */
     }
 }
-
-/* anidrag */
+/* Styling untuk kontainer anidrag */
 .anidrag {
-    text-align: center;
-    padding: 50px 0;
+    text-align: center; /* Mengatur teks agar berada di tengah. */
+    padding: 50px 0; /* Memberikan padding atas dan bawah 50px. */
 }
 
+/* Styling untuk elemen h2 dalam anidrag */
 .anidrag h2 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 32px; /* Mengatur ukuran font menjadi 32px. */
+    color: #333; /* Mengatur warna teks menjadi #333 (abu-abu gelap). */
+    margin-bottom: 20px; /* Memberikan margin bawah 20px. */
 }
 
+/* Styling untuk paragraf dalam anidrag */
 .anidrag p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
+    font-size: 18px; /* Mengatur ukuran font menjadi 18px. */
+    color: #666; /* Mengatur warna teks menjadi #666 (abu-abu lebih terang). */
+    margin-bottom: 40px; /* Memberikan margin bawah 40px. */
 }
 
-.ani{
-    margin: 0;
-    background-image: 
-        url(img/bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Kontainer utama untuk anidrag */
+.ani {
+    margin: 0; /* Mengatur margin menjadi 0. */
+    background-image: url(img/bg.jpg); /* Mengatur gambar latar belakang. */
+    background-size: cover; /* Mengatur gambar agar menutupi seluruh area. */
+    background-position: center; /* Mengatur posisi gambar di tengah. */
+    background-attachment: fixed; /* Mengatur gambar latar tetap saat menggulir. */
+    min-height: 100vh; /* Mengatur tinggi minimum menjadi 100% dari viewport. */
+    display: flex; /* Mengatur display menjadi flexbox. */
+    flex-direction: column; /* Mengatur arah flex menjadi kolom. */
+    justify-content: center; /* Mengatur konten agar terpusat secara vertikal. */
+    align-items: center; /* Mengatur konten agar terpusat secara horizontal. */
 }
 
-.slider{
-    width: 70vw;
-    overflow: auto;
-    padding: 100px;
-    box-sizing: border-box;
-    backdrop-filter: blur(10px);
-    background-color: #fff3;
-    border-radius: 20px;
+/* Styling untuk slider */
+.slider {
+    width: 70vw; /* Mengatur lebar slider menjadi 70% dari viewport width. */
+    overflow: auto; /* Mengatur overflow agar dapat digulir. */
+    padding: 100px; /* Memberikan padding 100px di semua sisi. */
+    box-sizing: border-box; /* Mengatur box-sizing agar padding dan border termasuk dalam ukuran elemen. */
+    backdrop-filter: blur(10px); /* Menambahkan efek blur pada latar belakang. */
+    background-color: #fff3; /* Mengatur warna latar belakang dengan transparansi. */
+    border-radius: 20px; /* Memberikan sudut melengkung pada slider. */
 }
 
-.slider::-webkit-scrollbar{
-    width: 0;
+/* Menghilangkan scrollbar pada slider */
+.slider::-webkit-scrollbar {
+    width: 0; /* Mengatur lebar scrollbar menjadi 0 (tidak terlihat). */
 }
 
-.ani .title{
-    padding: 20px 0;
-    color: #fff;
-    text-shadow: 0 0 10px #0007;
-    font-weight: 500;
-    font-size: large;
+/* Styling untuk judul dalam anidrag */
+.ani .title {
+    padding: 20px 0; /* Memberikan padding atas dan bawah 20px. */
+    color: #fff; /* Mengatur warna teks menjadi putih. */
+    text-shadow: 0 0 10px #0007; /* Menambahkan efek bayangan teks. */
+    font-weight: 500; /* Mengatur berat font. */
+    font-size: large; /* Mengatur ukuran font menjadi besar. */
 }
 
-.slider .form{
-    width: max-content;
-    --left: 0;
-    transform: translateX(var(--left));
+/* Kontainer untuk form slider */
+.slider .form {
+    width: max-content; /* Mengatur lebar form berdasarkan konten. */
+    --left: 0; /* Mendeklarasikan variabel CSS untuk posisi kiri. */
+    transform: translateX(var(--left)); /* Menggunakan variabel untuk mengubah posisi horizontal. */
 }
 
-.form .barang{
-    width: 200px;
-    height: 300px;
-    display: inline-block;
-    margin-right: 20px;
-    transform: perspective(10px);
-    transform-style: preserve-3d;
+/* Styling untuk setiap barang dalam slider */
+.form .barang {
+    width: 200px; /* Mengatur lebar setiap barang menjadi 200px. */
+    height: 300px; /* Mengatur tinggi setiap barang menjadi 300px. */
+    display: inline-block; /* Mengatur tampilan barang menjadi inline-block. */
+    margin-right: 20px; /* Memberikan margin kanan 20px. */
+    transform: perspective(10px); /* Mengatur perspektif untuk efek 3D. */
+    transform-style: preserve-3d; /* Memungkinkan efek 3D untuk anak elemen. */
 }
 
-.slider .form .barang .konten{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform .5s;
+/* Konten dari setiap barang */
+.slider .form .barang .konten {
+    width: 100%; /* Mengatur lebar konten menjadi 100%. */
+    height: 100%; /* Mengatur tinggi konten menjadi 100%. */
+    position: relative; /* Mengatur posisi konten menjadi relatif. */
+    border-radius: 10px; /* Memberikan sudut melengkung pada konten. */
+    overflow: hidden; /* Menyembunyikan elemen yang melampaui batas konten. */
+    transition: transform .5s; /* Menambahkan efek transisi pada transformasi selama 0.5 detik. */
 }
 
-.slider .form .barang .konten .dus{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    backdrop-filter: blur(10px);
-    color: #fff;
-    font-family: monospace;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
+/* Styling untuk dus (bagian bawah) dari setiap barang */
+.slider .form .barang .konten .dus {
+    position: absolute; /* Mengatur posisi dus menjadi absolut. */
+    bottom: 0; /* Menempatkan dus di bagian bawah konten. */
+    left: 0; /* Menempatkan dus di sisi kiri konten. */
+    width: 100%; /* Mengatur lebar dus menjadi 100%. */
+    height: 50px; /* Mengatur tinggi dus menjadi 50px. */
+    backdrop-filter: blur(10px); /* Menambahkan efek blur pada latar belakang dus. */
+    color: #fff; /* Mengatur warna teks menjadi putih. */
+    font-family: monospace; /* Mengatur font menjadi monospace. */
+    display: flex; /* Mengatur dus sebagai flex container. */
+    justify-content: space-between; /* Menyebar elemen di dalam dus secara merata. */
+    align-items: center; /* Mengatur elemen agar terpusat secara vertikal. */
+    padding: 10px; /* Memberikan padding 10px di semua sisi. */
+    box-sizing: border-box; /* Mengatur box-sizing agar padding dan border termasuk dalam ukuran dus. */
 }
 
-.slider .form .barang .konten .dus button{
-    background-color: #eee;
-    border: none;
-    border-radius: 10px;
-    font-size: small;
+/* Styling untuk tombol dalam dus */
+.slider .form .barang .konten .dus button {
+    background-color: #eee; /* Mengatur warna latar belakang tombol. */
+    border: none; /* Menghilangkan border tombol. */
+    border-radius: 10px; /* Memberikan sudut melengkung pada tombol. */
+    font-size: small; /* Mengatur ukuran font tombol menjadi kecil. */
 }
 
-.slider .form.left .barang .konten{
-    transform: rotateY(-1deg) scale(0.8);
+/* Efek transformasi untuk barang yang berada di sisi kiri */
+.slider .form.left .barang .konten {
+    transform: rotateY(-1deg) scale(0.8); /* Memutar barang sedikit ke kiri dan memperkecil ukurannya. */
 }
 
-.slider .form.right .barang .konten{
-    transform: rotateY(1deg) scale(0.8);
+/* Efek transformasi untuk barang yang berada di sisi kanan */
+.slider .form.right .barang .konten {
+    transform: rotateY(1deg) scale(0.8); /* Memutar barang sedikit ke kanan dan memperkecil ukurannya. */
 }
 
-.slider .form .barang img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Styling untuk gambar dalam barang */
+.slider .form .barang img {
+    width: 100%; /* Mengatur lebar gambar menjadi 100%. */
+    height: 100%; /* Mengatur tinggi gambar menjadi 100%. */
+    object-fit: cover; /* Mengatur gambar agar menutupi area tanpa mengubah rasio aspek. */
 }
